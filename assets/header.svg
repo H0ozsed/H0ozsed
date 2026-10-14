@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220" role="img" aria-labelledby="t d">
+  <title id="t">Ethaniel Gonthier</title>
+  <desc id="d">Étudiant à Epitech, La Réunion. Du C bas niveau aux applications web.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#121a3a"/>
+      <stop offset="1" stop-color="#2a1450"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" x2="1">
+      <stop offset="0" stop-color="#58a6ff"/>
+      <stop offset="0.5" stop-color="#bc8cff"/>
+      <stop offset="1" stop-color="#ff7eb6"/>
+      <animate attributeName="x1" values="0;-1;0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;2;1" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <clipPath id="frame"><rect width="840" height="220" rx="16"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .hello { font-size: 18px; fill: #8b949e; }
+    .name { font-size: 46px; font-weight: 800; fill: url(#name); }
+    .sub { font-size: 17px; fill: #c9d1d9; }
+    .prompt { font: 600 16px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #7ee787; }
+    .word { font: 600 16px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #e6edf3; opacity: 0; }
+    .w1 { animation: cycle 12s infinite 0s; }
+    .w2 { animation: cycle 12s infinite 3s; }
+    .w3 { animation: cycle 12s infinite 6s; }
+    .w4 { animation: cycle 12s infinite 9s; }
+    @keyframes cycle {
+      0% { opacity: 0; transform: translateY(8px); }
+      4%, 22% { opacity: 1; transform: none; }
+      26%, 100% { opacity: 0; transform: translateY(-8px); }
+    }
+    .cursor { fill: #7ee787; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .orb { animation: float 9s ease-in-out infinite; }
+    @keyframes float { 50% { transform: translateY(-10px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .w1 { animation: none; opacity: 1; }
+      .w2, .w3, .w4 { animation: none; }
+      .cursor, .orb { animation: none; }
+    }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="840" height="220" fill="url(#bg)"/>
+    <rect width="840" height="220" fill="url(#grid)"/>
+    <circle class="orb" cx="720" cy="60" r="90" fill="#bc8cff" opacity="0.12"/>
+    <circle class="orb" cx="790" cy="190" r="70" fill="#58a6ff" opacity="0.12" style="animation-delay:-4s"/>
+  </g>
+  <text x="44" y="62" class="hello">Salut, moi c’est</text>
+  <text x="42" y="112" class="name">Ethaniel Gonthier</text>
+  <text x="44" y="146" class="sub">Étudiant à Epitech (promo 2029) · La Réunion 🌴</text>
+  <text x="44" y="186" class="prompt">$</text>
+  <text x="64" y="186" class="word w1">./build --lang C --level bas-niveau<tspan class="cursor"> ▌</tspan></text>
+  <text x="64" y="186" class="word w2">./build --web next.js typescript<tspan class="cursor"> ▌</tspan></text>
+  <text x="64" y="186" class="word w3">./build --script python<tspan class="cursor"> ▌</tspan></text>
+  <text x="64" y="186" class="word w4">./build --team hackathon<tspan class="cursor"> ▌</tspan></text>
+</svg>
