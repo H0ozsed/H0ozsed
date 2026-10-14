@@ -17,33 +17,33 @@ applications web complètes en TypeScript.
 <sub>Cliquez sur une image pour l’agrandir, sur le titre pour voir le projet.</sub>
 
 <!--
-  Pour ajouter un projet : copiez un bloc <td>…</td> ci-dessous, mettez sa capture dans
-  assets/ (format paysage, environ 1200 × 750) et changez le titre, les liens et le texte.
-  Deux cartes par ligne : au-delà de deux, ouvrez une nouvelle ligne <tr>…</tr>.
+  Pour ajouter un projet : copiez un bloc <tr>…</tr> (le modèle commenté en bas du tableau),
+  mettez sa capture dans assets/ (format paysage) et changez le titre, les liens et le texte.
+  Une ligne par projet : la miniature à gauche s'agrandit au clic.
 -->
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <a href="./assets/role-play.png"><img src="./assets/role-play.png" alt="Capture du jeu de rôle en pixel art de Hackaton Justice : Camille dans sa chambre, à 23 h, avec ses jauges de bien-être, de relation, d’argent et de temps" width="100%"></a>
-      <h3><a href="https://github.com/H0ozsed/hackaton-justice">⚖️ Hackaton Justice</a></h3>
-      <p>Régler un litige du quotidien <b>sans passer par le juge</b> : la bonne solution amiable, expliquée simplement, et un jeu de rôle en pixel art pour s’entraîner.</p>
-      <p><b>Mon rôle :</b> moteur du jeu de rôle, composants accessibles, tests automatisés.</p>
-      <sub>Hackathon · équipe de 5 · octobre 2026<br><code>Next.js</code> <code>TypeScript</code> <code>Tailwind</code> <code>Playwright</code></sub>
+    <td width="300" valign="top">
+      <a href="./assets/role-play.png"><img src="./assets/role-play.png" alt="Capture du jeu de rôle en pixel art de Hackaton Justice : Camille dans sa chambre, à 23 h, avec ses jauges de bien-être, de relation, d’argent et de temps" width="280"></a>
     </td>
-    <!--
-    <td width="50%" valign="top">
-      <a href="./assets/projet-2.png"><img src="./assets/projet-2.png" alt="Capture de Projet 2 : ce qu’on y voit" width="100%"></a>
-      <h3><a href="https://github.com/H0ozsed/projet-2">🔧 Projet 2</a></h3>
-      <p>Ce que fait le projet, en une phrase.</p>
-      <p><b>Mon rôle :</b> ce que vous y avez fait.</p>
-      <sub>Contexte · date<br><code>Techno</code> <code>Techno</code></sub>
+    <td valign="top">
+      <b><a href="https://github.com/H0ozsed/hackaton-justice">⚖️ Hackaton Justice</a></b><br>
+      Régler un litige du quotidien <b>sans passer par le juge</b> : la bonne solution amiable, expliquée simplement, et un jeu de rôle en pixel art pour s’entraîner.<br><br>
+      <b>Mon rôle :</b> moteur du jeu de rôle, composants accessibles, tests automatisés.<br>
+      <sub>Hackathon · équipe de 5 · octobre 2026 · <code>Next.js</code> <code>TypeScript</code> <code>Tailwind</code> <code>Playwright</code></sub>
     </td>
-    -->
   </tr>
   <!--
   <tr>
-    <td width="50%" valign="top">… projet 3 …</td>
-    <td width="50%" valign="top">… projet 4 …</td>
+    <td width="300" valign="top">
+      <a href="./assets/projet-2.png"><img src="./assets/projet-2.png" alt="Capture de Projet 2 : ce qu’on y voit" width="280"></a>
+    </td>
+    <td valign="top">
+      <b><a href="https://github.com/H0ozsed/projet-2">🔧 Projet 2</a></b><br>
+      Ce que fait le projet, en une phrase.<br><br>
+      <b>Mon rôle :</b> ce que vous y avez fait.<br>
+      <sub>Contexte · date · <code>Techno</code> <code>Techno</code></sub>
+    </td>
   </tr>
   -->
 </table>
