@@ -175,7 +175,7 @@ const INFO = [
   ['Focus', 'cybersecurity, full-stack web'],
   ['Uptime', `${uptime} on GitHub`],
   ['Languages', 'C, Rust, Python, TypeScript, HTML, CSS'],
-  ['Stack', 'Django, Next.js, React, PostgreSQL, Docker'],
+  ['Stack', 'React, Next.js, FastAPI, Django, PostgreSQL'],
   ...(pkgVersion ? [['Packages', `${PACKAGE} ${pkgVersion} (PyPI)`]] : []),
   ['Work', 'freelance developer'],
   ['Status', 'looking for an internship', 'hot'],
