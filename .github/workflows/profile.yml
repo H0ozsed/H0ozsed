@@ -1,7 +1,6 @@
-# Regenerates the images of the profile README every day: the contribution stats card
-# (scripts/stats.mjs) and the contribution snake (Platane/snk). They are published on the
-# `output` branch, so the daily update adds no commit to `main`.
-name: Profile images
+# Regenerates the contribution stats card of the profile README every day (scripts/stats.mjs).
+# It is published on the `output` branch, so the daily update adds no commit to `main`.
+name: Profile stats card
 
 on:
   schedule:
@@ -33,14 +32,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}
-
-      - name: Contribution snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/snake-light.svg
-            dist/snake-dark.svg?palette=github-dark
 
       - name: Publish on the output branch
         uses: crazy-max/ghaction-github-pages@v4

@@ -1,73 +1,56 @@
-<p align="center">
-  <img src="./assets/header.svg" alt="Salut, moi c’est Ethaniel Gonthier, étudiant à Epitech (promo 2029), La Réunion" width="100%">
-</p>
+## Hi, I'm Ethaniel
 
-Étudiant en première année à **Epitech** (PGE, promo 2029), à La Réunion. J’aime comprendre
-comment les choses marchent **de bas en haut** : la mémoire et les pointeurs en C, puis des
-applications web complètes en TypeScript.
+I'm a third-year student at [Epitech](https://www.epitech.eu/) in La Réunion (Programme Grande École, class of 2029),
+specialising in cybersecurity and full-stack development. I like web apps that hold up when
+someone tries to break them: input validation, safe outbound requests, secrets that survive a
+key rotation.
 
-- 🎓 Projets Epitech en **C** : algorithmique, graphisme, systèmes
-- 🌐 Applications web en **TypeScript / Next.js**, scripts et outils en **Python**
-- 🤝 Travail en équipe : issues, pull requests, revue de code, tests automatisés
+**I'm looking for an internship.**
+<!-- TODO: add start date, length and location to the line above, e.g. "I'm looking for a 4 to 6 month internship from January 2027, remote or on-site." -->
 
----
 
-### 🚀 Mes projets
+### What I've built
 
-<sub>Cliquez sur une image pour l’agrandir, sur le titre pour voir le projet.</sub>
+**[django-widget-hub](https://github.com/H0ozsed/Plugin-Django-widget)**: a Django package,
+[on PyPI](https://pypi.org/project/django-widget-hub/), for declaring dashboard widgets once in
+Python. It grew out of an Epitech dashboard project where the hand-written SSRF check had a DNS
+rebinding gap and the token encryption key broke on every `SECRET_KEY` rotation. The package fixes
+both with `safe_fetch()` and an encrypted credential store, and adds validation, owner-scoped CRUD
+and adapters for django-ninja and DRF.<br>
+<sub>Python · Django · CI on GitHub Actions</sub>
 
-<!--
-  Pour ajouter un projet : copiez un bloc <tr>…</tr> (le modèle commenté en bas du tableau),
-  mettez sa capture dans assets/ (format paysage) et changez le titre, les liens et le texte.
-  Une ligne par projet : la miniature à gauche s'agrandit au clic.
--->
-<table>
-  <tr>
-    <td width="300" valign="top">
-      <a href="./assets/role-play.png"><img src="./assets/role-play.png" alt="Capture du jeu de rôle en pixel art de Hackaton Justice : Camille dans sa chambre, à 23 h, avec ses jauges de bien-être, de relation, d’argent et de temps" width="280"></a>
-    </td>
-    <td valign="top">
-      <b><a href="https://github.com/H0ozsed/hackaton-justice">⚖️ Hackaton Justice</a></b><br>
-      Régler un litige du quotidien <b>sans passer par le juge</b> : la bonne solution amiable, expliquée simplement, et un jeu de rôle en pixel art pour s’entraîner.<br><br>
-      <b>Mon rôle :</b> moteur du jeu de rôle, composants accessibles, tests automatisés.<br>
-      <sub>Hackathon · équipe de 5 · octobre 2026 · <code>Next.js</code> <code>TypeScript</code> <code>Tailwind</code> <code>Playwright</code></sub>
-    </td>
-  </tr>
-  <!--
-  <tr>
-    <td width="300" valign="top">
-      <a href="./assets/projet-2.png"><img src="./assets/projet-2.png" alt="Capture de Projet 2 : ce qu’on y voit" width="280"></a>
-    </td>
-    <td valign="top">
-      <b><a href="https://github.com/H0ozsed/projet-2">🔧 Projet 2</a></b><br>
-      Ce que fait le projet, en une phrase.<br><br>
-      <b>Mon rôle :</b> ce que vous y avez fait.<br>
-      <sub>Contexte · date · <code>Techno</code> <code>Techno</code></sub>
-    </td>
-  </tr>
-  -->
-</table>
+**[Hackaton Justice](https://github.com/H0ozsed/hackaton-justice)**: a web app, built by a team of
+five in an October 2026 hackathon, that steers people in an everyday dispute (a noisy neighbour,
+a kept deposit) towards conciliation or mediation instead of court. I wrote the pixel-art
+role-play engine that lets people rehearse the conversation, plus shared UI and tooling.<br>
+<sub>Next.js · TypeScript · Tailwind · Prisma · Vitest · Playwright + axe-core</sub>
 
----
+Most of my school work, including C projects like Corewar and Wolf3D, is in private Epitech
+repositories. I'm happy to walk through it in an interview.
+<!-- TODO: confirm you are fine naming Corewar and Wolf3D here. -->
 
-### 📈 Mon activité
+<!-- TODO: add a third project if it adds something different (e.g. a C or systems project you can make public). -->
+
+<!-- TODO: add security work you can show publicly: CTFs (platform + rank or handle), Root-Me / TryHackMe / HackTheBox profile, write-ups. -->
+
+### Tools I use
+
+- **Languages:** C, Python, TypeScript, JavaScript
+- **Web:** Django, Next.js, React, Tailwind CSS, Prisma, PostgreSQL
+- **Testing and tooling:** pytest, Vitest, Playwright, Ruff, Docker, GitHub Actions, Linux
+
+<!-- TODO: remove anything here you would not want to be asked about in an interview. -->
+
+### Activity
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/stats-dark.svg">
-  <img src="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/stats-light.svg" alt="Mes contributions GitHub : sur 12 mois, depuis la création du compte, série en cours, meilleure série et graphique par mois" width="100%">
+  <img src="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/stats-light.svg" alt="GitHub contributions over the last 12 months, including private school repositories, with a bar per month" width="100%">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/snake-dark.svg">
-  <img src="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/snake-light.svg" alt="Un serpent qui parcourt et mange mon calendrier de contributions" width="100%">
-</picture>
+<sub>Rebuilt daily by a GitHub Action. It counts private contributions, which is where most Epitech work lives.</sub>
 
-<sub>Mis à jour chaque jour par une GitHub Action ; inclut mes contributions sur des dépôts privés (projets Epitech).</sub>
+### Contact
 
----
-
-### 🛠️ Ce que j’utilise
-
-<p>
-  <img src="https://skillicons.dev/icons?i=c,python,ts,js,nextjs,react,tailwind,git,docker,linux&perline=10" alt="C, Python, TypeScript, JavaScript, Next.js, React, Tailwind CSS, Git, Docker, Linux">
-</p>
+[Email](mailto:momodugta@gmail.com) · [Portfolio](https://h0ozsed.github.io/)
+<!-- TODO: add " · [LinkedIn](https://www.linkedin.com/in/your-handle)" to the line above, and confirm this is the email you want recruiters to use. -->

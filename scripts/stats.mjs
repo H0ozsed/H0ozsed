@@ -87,12 +87,12 @@ for (let i = 11; i >= 0; i--) {
   const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - i, 1))
   const key = d.toISOString().slice(0, 7)
   const count = calendar.filter(([date]) => date.startsWith(key)).reduce((s, [, n]) => s + n, 0)
-  months.push({ key, count, label: d.toLocaleDateString('fr-FR', { month: 'short' }) })
+  months.push({ key, count, label: d.toLocaleDateString('en-GB', { month: 'short' }) })
 }
 
 // ---- SVG -------------------------------------------------------------------------------
 
-const fmt = (n) => new Intl.NumberFormat('fr-FR').format(n)
+const fmt = (n) => new Intl.NumberFormat('en-GB').format(n)
 const escape = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
 const THEMES = {
@@ -122,10 +122,10 @@ function card(t) {
   const W = 840
   const H = 250
   const metrics = [
-    { value: fmt(lastYear), label: 'contributions sur 12 mois' },
-    { value: fmt(total), label: `contributions depuis ${created.getUTCFullYear()}` },
-    { value: fmt(current), label: `jour${current > 1 ? 's' : ''} de série en cours` },
-    { value: fmt(longest), label: 'jours de meilleure série' },
+    { value: fmt(lastYear), label: 'contributions in 12 months' },
+    { value: fmt(total), label: `contributions since ${created.getUTCFullYear()}` },
+    { value: fmt(current), label: `day${current === 1 ? '' : 's'} current streak` },
+    { value: fmt(longest), label: 'days longest streak' },
   ]
   const colW = (W - 64) / metrics.length
   const max = Math.max(1, ...months.map((m) => m.count))
@@ -149,15 +149,15 @@ function card(t) {
       const h = Math.max(3, Math.round((m.count / max) * chartH))
       const x = chartX + i * barW + 4
       const w = barW - 8
-      return `<rect x="${x}" y="${chartY + chartH - h}" width="${w}" height="${h}" rx="3" fill="${m.count ? t.bar : t.barEmpty}" class="grow" style="animation-delay:${0.5 + i * 0.04}s"><title>${escape(m.label)} : ${fmt(m.count)}</title></rect>
+      return `<rect x="${x}" y="${chartY + chartH - h}" width="${w}" height="${h}" rx="3" fill="${m.count ? t.bar : t.barEmpty}" class="grow" style="animation-delay:${0.5 + i * 0.04}s"><title>${escape(m.label)}: ${fmt(m.count)}</title></rect>
   <text x="${x + w / 2}" y="${chartY + chartH + 16}" class="month" text-anchor="middle">${escape(m.label.replace('.', ''))}</text>`
     })
     .join('\n  ')
 
-  const updated = now.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+  const updated = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title desc">
-  <title id="title">Activité GitHub de ${escape(user)}</title>
+  <title id="title">GitHub activity of ${escape(user)}</title>
   <desc id="desc">${escape(`${metrics.map((m) => `${m.value} ${m.label}`).join(', ')}.`)}</desc>
   <defs>
     <linearGradient id="accent" x1="0" x2="1">
@@ -179,8 +179,8 @@ function card(t) {
     @media (prefers-reduced-motion: reduce) { .fade, .grow { animation: none; opacity: 1; transform: none; } }
   </style>
   <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="12" fill="${t.bg}" stroke="${t.border}"/>
-  <text x="32" y="44" class="title">Mon activité sur GitHub</text>
-  <text x="${W - 32}" y="44" class="sub" text-anchor="end">mis à jour le ${escape(updated)}</text>
+  <text x="32" y="44" class="title">GitHub activity</text>
+  <text x="${W - 32}" y="44" class="sub" text-anchor="end">updated ${escape(updated)}</text>
   ${metricSvg}
   ${bars}
 </svg>
