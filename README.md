@@ -45,6 +45,21 @@ repositories. I'm happy to walk through it in an interview.
 <!-- TODO: confirm you are fine naming Corewar and Wolf3D here. -->
 <!-- TODO: add security work you can show publicly: CTFs (platform + rank or handle), Root-Me / TryHackMe / HackTheBox profile, write-ups. -->
 
+### Certifications
+
+<table>
+  <tr>
+    <td width="120" align="center">
+      <a href="https://www.credly.com/badges/56f65b45-5017-4f9d-a288-ed5beae1fb96/public_url"><img src="https://images.credly.com/size/110x110/images/30544d11-edec-4ea2-849c-7bf742e101ef/blob" alt="Credly badge: Deploying and Evaluating GenAI Apps with MongoDB" width="96"></a>
+    </td>
+    <td valign="middle">
+      <b><a href="https://www.credly.com/badges/56f65b45-5017-4f9d-a288-ed5beae1fb96/public_url">Deploying and Evaluating GenAI Apps with MongoDB</a></b><br>
+      Issued by MongoDB, October 2026. Covers retrieval-augmented generation (RAG), evaluating LLM apps and deploying them.<br>
+      <sub>Verified on Credly</sub>
+    </td>
+  </tr>
+</table>
+
 ### Tools I use
 
 <table>
