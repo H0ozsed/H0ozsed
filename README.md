@@ -6,7 +6,8 @@
 I'm Ethaniel, a third-year student at [Epitech](https://www.epitech.eu/) in La Réunion (class of 2029),
 specialising in cybersecurity and full-stack development. I like web apps that hold up when
 someone tries to break them: input validation, safe outbound requests, secrets that survive a
-key rotation. **I'm looking for an internship.**
+key rotation. I also work as a freelance developer, and **I'm looking for an internship.**
+<!-- TODO: say what you do as a freelancer (e.g. "websites for local businesses") and add a link (Malt, portfolio page) if you have one. -->
 <!-- TODO: add start date, length and location, e.g. "I'm looking for a 4 to 6 month internship from January 2027, remote or on-site." -->
 
 ### What I've built
@@ -46,22 +47,61 @@ repositories. I'm happy to walk through it in an interview.
 
 ### Tools I use
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=c,python,ts,django,nextjs,react,tailwind,postgres,prisma,docker,linux,githubactions&theme=dark&perline=12">
-  <img src="https://skillicons.dev/icons?i=c,python,ts,django,nextjs,react,tailwind,postgres,prisma,docker,linux,githubactions&theme=light&perline=12" alt="C, Python, TypeScript, Django, Next.js, React, Tailwind CSS, PostgreSQL, Prisma, Docker, Linux, GitHub Actions" width="100%">
-</picture>
+<table>
+  <tr>
+    <td><b>Languages</b></td>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=c,rust,python,ts,js,html,css,bash&theme=dark">
+        <img src="https://skillicons.dev/icons?i=c,rust,python,ts,js,html,css,bash&theme=light" alt="C, Rust, Python, TypeScript, JavaScript, HTML, CSS, Bash" height="36">
+      </picture>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Front end</b></td>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,tailwind&theme=dark">
+        <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind&theme=light" alt="React, Next.js, Tailwind CSS" height="36">
+      </picture>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Back end</b></td>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=django,nodejs,postgres,prisma&theme=dark">
+        <img src="https://skillicons.dev/icons?i=django,nodejs,postgres,prisma&theme=light" alt="Django, Node.js, PostgreSQL, Prisma" height="36">
+      </picture>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Tools</b></td>
+    <td>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=linux,git,github,githubactions,docker,vitest&theme=dark">
+        <img src="https://skillicons.dev/icons?i=linux,git,github,githubactions,docker,vitest&theme=light" alt="Linux, Git, GitHub, GitHub Actions, Docker, Vitest" height="36">
+      </picture>
+    </td>
+  </tr>
+</table>
 
-<sub>Testing: pytest, Vitest, Playwright. Linting: Ruff, ESLint.</sub>
+<sub>Also: pytest and Playwright for tests, Ruff and ESLint for linting.</sub>
 <!-- TODO: remove anything you would not want to be asked about in an interview. -->
 
 ### Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/stats-dark.svg">
+  <img src="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/stats-light.svg" alt="My GitHub contributions: total for the last 12 months and since I joined, current and best streak, best day, and bars per month and per weekday" width="100%">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/snake-dark.svg">
   <img src="https://raw.githubusercontent.com/H0ozsed/H0ozsed/output/snake-light.svg" alt="A snake eating my GitHub contribution calendar" width="100%">
 </picture>
 
-<sub>The card and the snake are rebuilt every morning by a GitHub Action. They count private contributions, which is where most Epitech work lives.</sub>
+<sub>The cards and the snake are rebuilt every morning by a GitHub Action. They count private contributions, which is where most Epitech work lives.</sub>
 
 ### Contact
 

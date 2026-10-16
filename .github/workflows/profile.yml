@@ -1,5 +1,5 @@
-# Regenerates the images of the profile README every day: the terminal card
-# (scripts/terminal.mjs) and the contribution snake (Platane/snk). They are published on the
+# Regenerates the images of the profile README every day: the terminal and stats cards
+# (scripts/cards.mjs) and the contribution snake (Platane/snk). They are published on the
 # `output` branch, so the daily update adds no commit to `main`.
 name: Profile images
 
@@ -28,8 +28,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Terminal card
-        run: node scripts/terminal.mjs dist
+      - name: Terminal and stats cards
+        run: node scripts/cards.mjs dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_USER: ${{ github.repository_owner }}

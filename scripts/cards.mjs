@@ -1,7 +1,8 @@
-// Builds the terminal card at the top of the profile README (light and dark SVG): a
-// neofetch-style window with a volcano (Piton de la Fournaise) and live numbers.
+// Builds the two cards of the profile README, each in light and dark SVG:
+// - terminal: a neofetch-style window with a volcano (Piton de la Fournaise) and live numbers;
+// - stats: contribution counts, streaks, best day, and bars per month and per weekday.
 // Run daily by .github/workflows/profile.yml. No dependency: Node 20+ (fetch).
-// Usage: GITHUB_TOKEN=... GITHUB_USER=H0ozsed node scripts/terminal.mjs <out-dir>
+// Usage: GITHUB_TOKEN=... GITHUB_USER=H0ozsed node scripts/cards.mjs <out-dir>
 //
 // Counts come from the public contribution calendar: private contributions are included
 // because "Private contributions" is enabled on the profile.
@@ -106,6 +107,27 @@ const uptime = [
   .filter(Boolean)
   .join(', ')
 
+const recent = calendar.filter(([d]) => d > yearAgo)
+
+// Last 12 months, per month (oldest first).
+const months = []
+for (let i = 11; i >= 0; i--) {
+  const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - i, 1))
+  const key = d.toISOString().slice(0, 7)
+  const count = recent.filter(([date]) => date.startsWith(key)).reduce((s, [, n]) => s + n, 0)
+  months.push({ count, label: d.toLocaleDateString('en-GB', { month: 'short' }) })
+}
+
+// Last 12 months, per weekday (Monday first).
+const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((label) => ({ label, count: 0 }))
+for (const [date, n] of recent) weekdays[(new Date(`${date}T00:00:00Z`).getUTCDay() + 6) % 7].count += n
+
+// Best day ever.
+const [bestDate, bestCount] = calendar.reduce((best, day) => (day[1] > best[1] ? day : best), ['', 0])
+const bestLabel = bestDate
+  ? new Date(`${bestDate}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })
+  : ''
+
 // ---- SVG -------------------------------------------------------------------------------
 
 const fmt = (n) => new Intl.NumberFormat('en-GB').format(n)
@@ -117,12 +139,14 @@ const THEMES = {
     key: '#79c0ff', user: '#7ee787', host: '#d2a8ff', hot: '#ffa657',
     lava: '#ff7b39', rock: '#c9d1d9', sea: '#58a6ff',
     blocks: ['#484f58', '#ff7b72', '#7ee787', '#d29922', '#58a6ff', '#bc8cff', '#39c5cf', '#e6edf3'],
+    accent: '#58a6ff', accent2: '#bc8cff', fill: '#238636', empty: '#161b22',
   },
   light: {
     bg: '#ffffff', bar: '#f6f8fa', border: '#d0d7de', text: '#1f2328', muted: '#57606a',
     key: '#0969da', user: '#1a7f37', host: '#8250df', hot: '#bc4c00',
     lava: '#d1440c', rock: '#424a53', sea: '#0969da',
     blocks: ['#24292f', '#cf222e', '#1a7f37', '#9a6700', '#0969da', '#8250df', '#1b7c83', '#6e7781'],
+    accent: '#0969da', accent2: '#8250df', fill: '#2da44e', empty: '#ebedf0',
   },
 }
 
@@ -150,9 +174,10 @@ const INFO = [
   ['Host', 'La Réunion (UTC+4)'],
   ['Focus', 'cybersecurity, full-stack web'],
   ['Uptime', `${uptime} on GitHub`],
-  ['Languages', 'C, Python, TypeScript'],
+  ['Languages', 'C, Rust, Python, TypeScript, HTML, CSS'],
   ['Stack', 'Django, Next.js, React, PostgreSQL, Docker'],
   ...(pkgVersion ? [['Packages', `${PACKAGE} ${pkgVersion} (PyPI)`]] : []),
+  ['Work', 'freelance developer'],
   ['Status', 'looking for an internship', 'hot'],
   null,
   ['Activity', `${fmt(lastYear)} contributions in 12 months (${fmt(total)} total)`],
@@ -245,9 +270,88 @@ function terminal(t) {
 `
 }
 
+function stats(t) {
+  const W = 840
+  const H = 284
+  const since = created.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })
+  const metrics = [
+    { value: fmt(lastYear), label: 'in the last 12 months' },
+    { value: fmt(total), label: `since ${since}` },
+    { value: fmt(current), label: `day${current === 1 ? '' : 's'} current streak` },
+    { value: fmt(longest), label: 'days best streak' },
+    { value: fmt(bestCount), label: `best day, ${bestLabel}` },
+  ]
+  const colW = (W - 64) / metrics.length
+  const metricSvg = metrics
+    .map(
+      (m, i) => `<g class="fade" style="animation-delay:${(0.1 + i * 0.1).toFixed(2)}s">
+    <text x="${32 + i * colW}" y="98" class="value">${escape(m.value)}</text>
+    <text x="${32 + i * colW}" y="122" class="label">${escape(m.label)}</text>
+  </g>`,
+    )
+    .join('\n  ')
+
+  const chartY = 176
+  const chartH = 64
+  let delay = 0.5
+  const bars = (items, x0, width) => {
+    const max = Math.max(1, ...items.map((m) => m.count))
+    const barW = width / items.length
+    return items
+      .map((m, i) => {
+        const h = Math.max(3, Math.round((m.count / max) * chartH))
+        const x = x0 + i * barW + 3
+        const w = barW - 6
+        delay += 0.04
+        return `<rect x="${x.toFixed(1)}" y="${chartY + chartH - h}" width="${w.toFixed(1)}" height="${h}" rx="3" fill="${m.count ? t.fill : t.empty}" class="grow" style="animation-delay:${delay.toFixed(2)}s"><title>${escape(m.label)}: ${fmt(m.count)}</title></rect>
+  <text x="${(x + w / 2).toFixed(1)}" y="${chartY + chartH + 18}" class="tick" text-anchor="middle">${escape(m.label)}</text>`
+      })
+      .join('\n  ')
+  }
+
+  const updated = now.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  const desc = `${metrics.map((m) => `${m.value} contributions ${m.label}`).join(', ')}.`
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="title desc">
+  <title id="title">GitHub contributions of ${escape(user)}</title>
+  <desc id="desc">${escape(desc)}</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="${t.accent}"/>
+      <stop offset="1" stop-color="${t.accent2}"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .title { font-size: 18px; font-weight: 700; fill: ${t.text}; }
+    .sub { font-size: 12px; fill: ${t.muted}; }
+    .section { font-size: 12px; font-weight: 600; fill: ${t.muted}; letter-spacing: .04em; text-transform: uppercase; }
+    .value { font-size: 32px; font-weight: 800; fill: url(#accent); }
+    .label { font-size: 13px; fill: ${t.muted}; }
+    .tick { font-size: 11px; fill: ${t.muted}; }
+    .fade { opacity: 0; animation: fade .6s ease-out forwards; }
+    .grow { transform-box: fill-box; transform-origin: bottom; transform: scaleY(0); animation: grow .6s ease-out forwards; }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @keyframes grow { to { transform: scaleY(1); } }
+    @media (prefers-reduced-motion: reduce) { .fade, .grow { animation: none; opacity: 1; transform: none; } }
+  </style>
+  <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="12" fill="${t.bg}" stroke="${t.border}"/>
+  <text x="32" y="44" class="title">Contributions</text>
+  <text x="${W - 32}" y="44" class="sub" text-anchor="end">private repositories included · updated ${escape(updated)}</text>
+  ${metricSvg}
+  <text x="32" y="${chartY - 14}" class="section">Per month</text>
+  <text x="592" y="${chartY - 14}" class="section">Per weekday</text>
+  ${bars(months, 32, 528)}
+  ${bars(weekdays, 592, W - 32 - 592)}
+</svg>
+`
+}
+
 mkdirSync(outDir, { recursive: true })
-writeFileSync(join(outDir, 'terminal-dark.svg'), terminal(THEMES.dark))
-writeFileSync(join(outDir, 'terminal-light.svg'), terminal(THEMES.light))
+for (const [name, theme] of Object.entries(THEMES)) {
+  writeFileSync(join(outDir, `terminal-${name}.svg`), terminal(theme))
+  writeFileSync(join(outDir, `stats-${name}.svg`), stats(theme))
+}
 console.log(
-  `terminal: ${lastYear} last year, ${total} total, streak ${current} (best ${longest}), ${PACKAGE} ${pkgVersion} -> ${outDir}`,
+  `cards: ${lastYear} last year, ${total} total, streak ${current} (best ${longest}), best day ${bestCount} on ${bestDate}, ${PACKAGE} ${pkgVersion} -> ${outDir}`,
 )
