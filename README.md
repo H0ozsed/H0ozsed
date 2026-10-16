@@ -67,8 +67,8 @@ repositories. I'm happy to walk through it in an interview.
     <td><b>Languages</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=c,rust,python,ts,js,html,css,bash&theme=dark">
-        <img src="https://skillicons.dev/icons?i=c,rust,python,ts,js,html,css,bash&theme=light" alt="C, Rust, Python, TypeScript, JavaScript, HTML, CSS, Bash" width="331" height="36">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=c%2Crust%2Cpython%2Cts%2Cjs%2Chtml%2Ccss%2Cbash&theme=dark">
+        <img src="https://skillicons.dev/icons?i=c%2Crust%2Cpython%2Cts%2Cjs%2Chtml%2Ccss%2Cbash&theme=light" alt="C, Rust, Python, TypeScript, JavaScript, HTML, CSS, Bash" width="331" height="36">
       </picture><br>
       <sub>C with SFML for the graphics projects (Wolf3D)</sub>
     </td>
@@ -77,8 +77,8 @@ repositories. I'm happy to walk through it in an interview.
     <td><b>Front end</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,threejs&theme=dark">
-        <img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,threejs&theme=light" alt="React, Next.js, Vite, Tailwind CSS, Three.js" width="205" height="36">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react%2Cnextjs%2Cvite%2Ctailwind%2Cthreejs&theme=dark">
+        <img src="https://skillicons.dev/icons?i=react%2Cnextjs%2Cvite%2Ctailwind%2Cthreejs&theme=light" alt="React, Next.js, Vite, Tailwind CSS, Three.js" width="205" height="36">
       </picture><br>
       <sub>Framer Motion, GSAP, React Three Fiber, shadcn/ui, React Hook Form + Zod</sub>
     </td>
@@ -87,8 +87,8 @@ repositories. I'm happy to walk through it in an interview.
     <td><b>Back end</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nodejs,express,fastapi,django&theme=dark">
-        <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django&theme=light" alt="Node.js, Express, FastAPI, Django" width="163" height="36">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nodejs%2Cexpress%2Cfastapi%2Cdjango&theme=dark">
+        <img src="https://skillicons.dev/icons?i=nodejs%2Cexpress%2Cfastapi%2Cdjango&theme=light" alt="Node.js, Express, FastAPI, Django" width="163" height="36">
       </picture><br>
       <sub>Hono, Socket.IO, django-ninja, Django REST framework, Better Auth, NextAuth, the Anthropic, OpenAI and Ollama APIs</sub>
     </td>
@@ -97,8 +97,8 @@ repositories. I'm happy to walk through it in an interview.
     <td><b>Data</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,sqlite,redis,prisma&theme=dark">
-        <img src="https://skillicons.dev/icons?i=postgres,sqlite,redis,prisma&theme=light" alt="PostgreSQL, SQLite, Redis, Prisma" width="163" height="36">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres%2Csqlite%2Credis%2Cprisma&theme=dark">
+        <img src="https://skillicons.dev/icons?i=postgres%2Csqlite%2Credis%2Cprisma&theme=light" alt="PostgreSQL, SQLite, Redis, Prisma" width="163" height="36">
       </picture><br>
       <sub>Drizzle, SQLAlchemy, pandas, NumPy, Plotly</sub>
     </td>
@@ -107,8 +107,8 @@ repositories. I'm happy to walk through it in an interview.
     <td><b>Desktop and vision</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=qt,opencv&theme=dark">
-        <img src="https://skillicons.dev/icons?i=qt,opencv&theme=light" alt="Qt (PySide6), OpenCV" width="78" height="36">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=qt%2Copencv&theme=dark">
+        <img src="https://skillicons.dev/icons?i=qt%2Copencv&theme=light" alt="Qt (PySide6), OpenCV" width="78" height="36">
       </picture><br>
       <sub>PySide6, face_recognition, rembg, Pillow</sub>
     </td>
@@ -117,8 +117,8 @@ repositories. I'm happy to walk through it in an interview.
     <td><b>Tests and tooling</b></td>
     <td>
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vitest,docker,nginx,githubactions,pnpm,git,linux&theme=dark">
-        <img src="https://skillicons.dev/icons?i=vitest,docker,nginx,githubactions,pnpm,git,linux&theme=light" alt="Vitest, Docker, Nginx, GitHub Actions, pnpm, Git, Linux" width="289" height="36">
+        <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vitest%2Cdocker%2Cnginx%2Cgithubactions%2Cpnpm%2Cgit%2Clinux&theme=dark">
+        <img src="https://skillicons.dev/icons?i=vitest%2Cdocker%2Cnginx%2Cgithubactions%2Cpnpm%2Cgit%2Clinux&theme=light" alt="Vitest, Docker, Nginx, GitHub Actions, pnpm, Git, Linux" width="289" height="36">
       </picture><br>
       <sub>Playwright + axe-core, pytest, Testing Library, ESLint, Prettier, Ruff, Husky</sub>
     </td>
