@@ -68,7 +68,7 @@ repositories. I'm happy to walk through it in an interview.
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=c,rust,python,ts,js,html,css,bash&theme=dark">
-        <img src="https://skillicons.dev/icons?i=c,rust,python,ts,js,html,css,bash&theme=light" alt="C, Rust, Python, TypeScript, JavaScript, HTML, CSS, Bash" height="36">
+        <img src="https://skillicons.dev/icons?i=c,rust,python,ts,js,html,css,bash&theme=light" alt="C, Rust, Python, TypeScript, JavaScript, HTML, CSS, Bash" width="331" height="36">
       </picture><br>
       <sub>C with SFML for the graphics projects (Wolf3D)</sub>
     </td>
@@ -78,7 +78,7 @@ repositories. I'm happy to walk through it in an interview.
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,threejs&theme=dark">
-        <img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,threejs&theme=light" alt="React, Next.js, Vite, Tailwind CSS, Three.js" height="36">
+        <img src="https://skillicons.dev/icons?i=react,nextjs,vite,tailwind,threejs&theme=light" alt="React, Next.js, Vite, Tailwind CSS, Three.js" width="205" height="36">
       </picture><br>
       <sub>Framer Motion, GSAP, React Three Fiber, shadcn/ui, React Hook Form + Zod</sub>
     </td>
@@ -88,7 +88,7 @@ repositories. I'm happy to walk through it in an interview.
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nodejs,express,fastapi,django&theme=dark">
-        <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django&theme=light" alt="Node.js, Express, FastAPI, Django" height="36">
+        <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django&theme=light" alt="Node.js, Express, FastAPI, Django" width="163" height="36">
       </picture><br>
       <sub>Hono, Socket.IO, django-ninja, Django REST framework, Better Auth, NextAuth, the Anthropic, OpenAI and Ollama APIs</sub>
     </td>
@@ -98,7 +98,7 @@ repositories. I'm happy to walk through it in an interview.
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=postgres,sqlite,redis,prisma&theme=dark">
-        <img src="https://skillicons.dev/icons?i=postgres,sqlite,redis,prisma&theme=light" alt="PostgreSQL, SQLite, Redis, Prisma" height="36">
+        <img src="https://skillicons.dev/icons?i=postgres,sqlite,redis,prisma&theme=light" alt="PostgreSQL, SQLite, Redis, Prisma" width="163" height="36">
       </picture><br>
       <sub>Drizzle, SQLAlchemy, pandas, NumPy, Plotly</sub>
     </td>
@@ -108,7 +108,7 @@ repositories. I'm happy to walk through it in an interview.
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=qt,opencv&theme=dark">
-        <img src="https://skillicons.dev/icons?i=qt,opencv&theme=light" alt="Qt (PySide6), OpenCV" height="36">
+        <img src="https://skillicons.dev/icons?i=qt,opencv&theme=light" alt="Qt (PySide6), OpenCV" width="78" height="36">
       </picture><br>
       <sub>PySide6, face_recognition, rembg, Pillow</sub>
     </td>
@@ -118,7 +118,7 @@ repositories. I'm happy to walk through it in an interview.
     <td>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=vitest,docker,nginx,githubactions,pnpm,git,linux&theme=dark">
-        <img src="https://skillicons.dev/icons?i=vitest,docker,nginx,githubactions,pnpm,git,linux&theme=light" alt="Vitest, Docker, Nginx, GitHub Actions, pnpm, Git, Linux" height="36">
+        <img src="https://skillicons.dev/icons?i=vitest,docker,nginx,githubactions,pnpm,git,linux&theme=light" alt="Vitest, Docker, Nginx, GitHub Actions, pnpm, Git, Linux" width="289" height="36">
       </picture><br>
       <sub>Playwright + axe-core, pytest, Testing Library, ESLint, Prettier, Ruff, Husky</sub>
     </td>
