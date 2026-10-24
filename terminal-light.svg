@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="430" viewBox="0 0 840 430" role="img" aria-labelledby="title desc">
+  <title id="title">Ethaniel Gonthier (H0ozsed)</title>
+  <desc id="desc">OS: Epitech PGE, year 3 of 5. Host: La Réunion (UTC+4). Focus: cybersecurity, full-stack web. Uptime: 2 years, 1 month on GitHub. Languages: C, Rust, Python, TypeScript, HTML, CSS. Stack: React, Next.js, FastAPI, Django, PostgreSQL. Packages: django-widget-hub 0.1.0 (PyPI). Work: freelance developer. Status: looking for an internship. Activity: 1,024 contributions in 12 months (1,571 total). Streak: 14 days (best 15). Updated: 24 October 2026.</desc>
+  <style>
+    text { font: 14px ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; fill: #1f2328; }
+    .text { fill: #1f2328; }
+    .muted { fill: #57606a; }
+    .key { fill: #0969da; font-weight: 700; }
+    .user { fill: #1a7f37; font-weight: 700; }
+    .host { fill: #8250df; font-weight: 700; }
+    .hot { fill: #bc4c00; font-weight: 700; }
+    .lava { fill: #d1440c; font-weight: 700; }
+    .rock { fill: #424a53; }
+    .sea { fill: #0969da; }
+    .bar { font: 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #57606a; }
+    .line, .art { opacity: 0; animation: show .25s ease-out forwards; }
+    .art { animation-delay: .8s; }
+    .lava { animation: glow 3s ease-in-out infinite; }
+    .cursor { fill: #1f2328; animation: blink 1s steps(1) infinite; }
+    @keyframes show { to { opacity: 1; } }
+    @keyframes glow { 50% { opacity: .55; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .line, .art, .lava, .cursor { animation: none; opacity: 1; }
+    }
+  </style>
+  <rect x="0.5" y="0.5" width="839" height="429" rx="10" fill="#ffffff" stroke="#d0d7de"/>
+  <path d="M0.5 32V10.5a10 10 0 0 1 10-10h819a10 10 0 0 1 10 10V32z" fill="#f6f8fa"/>
+  <line x1="0.5" y1="32" x2="839.5" y2="32" stroke="#d0d7de"/>
+  <circle cx="20" cy="16" r="6" fill="#ff5f57"/><circle cx="40" cy="16" r="6" fill="#febc2e"/><circle cx="60" cy="16" r="6" fill="#28c840"/>
+  <text x="420" y="20" class="bar" text-anchor="middle">ethaniel@H0ozsed: ~</text>
+  <text x="32" y="56" xml:space="preserve"><tspan class="user">ethaniel@H0ozsed</tspan><tspan class="muted">:</tspan><tspan class="key">~</tspan><tspan class="muted">$ </tspan><tspan class="text">neofetch</tspan></text>
+  <g class="art">
+  <text x="32" y="110" xml:space="preserve"><tspan class="muted">           ) )</tspan></text>
+  <text x="32" y="131" xml:space="preserve"><tspan class="muted">          ( ( (</tspan></text>
+  <text x="32" y="152" xml:space="preserve"><tspan class="muted">           ) ) )</tspan></text>
+  <text x="32" y="173" xml:space="preserve"><tspan class="rock">         _______</tspan></text>
+  <text x="32" y="194" xml:space="preserve"><tspan class="rock">        /</tspan><tspan class="lava">  \|/  </tspan><tspan class="rock">\</tspan></text>
+  <text x="32" y="215" xml:space="preserve"><tspan class="rock">       /</tspan><tspan class="lava">   /|\   </tspan><tspan class="rock">\</tspan></text>
+  <text x="32" y="236" xml:space="preserve"><tspan class="rock">      /</tspan><tspan class="lava">   / | \   </tspan><tspan class="rock">\</tspan></text>
+  <text x="32" y="257" xml:space="preserve"><tspan class="rock">     /</tspan><tspan class="lava">   /  |  \   </tspan><tspan class="rock">\</tspan></text>
+  <text x="32" y="278" xml:space="preserve"><tspan class="rock">    /</tspan><tspan class="lava">   /   |   \   </tspan><tspan class="rock">\</tspan></text>
+  <text x="32" y="299" xml:space="preserve"><tspan class="rock">   /</tspan><tspan class="lava">   /    |    \   </tspan><tspan class="rock">\</tspan></text>
+  <text x="32" y="320" xml:space="preserve"><tspan class="rock">  /</tspan><tspan class="lava">   /     |     \   </tspan><tspan class="rock">\</tspan></text>
+  <text x="32" y="341" xml:space="preserve"><tspan class="rock"> /___</tspan><tspan class="lava">/______|______\</tspan><tspan class="rock">___\</tspan></text>
+  <text x="32" y="362" xml:space="preserve"><tspan class="sea">~~~~~~~~~~~~~~~~~~~~~~~~~</tspan></text>
+  </g>
+  <text x="300" y="78" class="line" style="animation-delay:0.90s" xml:space="preserve"><tspan class="user">ethaniel</tspan><tspan class="muted">@</tspan><tspan class="host">H0ozsed</tspan></text>
+  <text x="300" y="99" class="line" style="animation-delay:0.97s" xml:space="preserve"><tspan class="muted">----------------</tspan></text>
+  <text x="300" y="120" class="line" style="animation-delay:1.04s" xml:space="preserve"><tspan class="key">OS         </tspan><tspan class="text">Epitech PGE, year 3 of 5</tspan></text>
+  <text x="300" y="141" class="line" style="animation-delay:1.11s" xml:space="preserve"><tspan class="key">Host       </tspan><tspan class="text">La Réunion (UTC+4)</tspan></text>
+  <text x="300" y="162" class="line" style="animation-delay:1.18s" xml:space="preserve"><tspan class="key">Focus      </tspan><tspan class="text">cybersecurity, full-stack web</tspan></text>
+  <text x="300" y="183" class="line" style="animation-delay:1.25s" xml:space="preserve"><tspan class="key">Uptime     </tspan><tspan class="text">2 years, 1 month on GitHub</tspan></text>
+  <text x="300" y="204" class="line" style="animation-delay:1.32s" xml:space="preserve"><tspan class="key">Languages  </tspan><tspan class="text">C, Rust, Python, TypeScript, HTML, CSS</tspan></text>
+  <text x="300" y="225" class="line" style="animation-delay:1.39s" xml:space="preserve"><tspan class="key">Stack      </tspan><tspan class="text">React, Next.js, FastAPI, Django, PostgreSQL</tspan></text>
+  <text x="300" y="246" class="line" style="animation-delay:1.46s" xml:space="preserve"><tspan class="key">Packages   </tspan><tspan class="text">django-widget-hub 0.1.0 (PyPI)</tspan></text>
+  <text x="300" y="267" class="line" style="animation-delay:1.53s" xml:space="preserve"><tspan class="key">Work       </tspan><tspan class="text">freelance developer</tspan></text>
+  <text x="300" y="288" class="line" style="animation-delay:1.60s" xml:space="preserve"><tspan class="key">Status     </tspan><tspan class="hot">looking for an internship</tspan></text>
+  <text x="300" y="319.5" class="line" style="animation-delay:1.67s" xml:space="preserve"><tspan class="key">Activity   </tspan><tspan class="text">1,024 contributions in 12 months (1,571 total)</tspan></text>
+  <text x="300" y="340.5" class="line" style="animation-delay:1.74s" xml:space="preserve"><tspan class="key">Streak     </tspan><tspan class="text">14 days (best 15)</tspan></text>
+  <text x="300" y="361.5" class="line" style="animation-delay:1.81s" xml:space="preserve"><tspan class="key">Updated    </tspan><tspan class="text">24 October 2026</tspan></text>
+  <g class="line" style="animation-delay:1.88s"><rect x="300" y="369.5" width="26" height="16" rx="2" fill="#24292f"/><rect x="330" y="369.5" width="26" height="16" rx="2" fill="#cf222e"/><rect x="360" y="369.5" width="26" height="16" rx="2" fill="#1a7f37"/><rect x="390" y="369.5" width="26" height="16" rx="2" fill="#9a6700"/><rect x="420" y="369.5" width="26" height="16" rx="2" fill="#0969da"/><rect x="450" y="369.5" width="26" height="16" rx="2" fill="#8250df"/><rect x="480" y="369.5" width="26" height="16" rx="2" fill="#1b7c83"/><rect x="510" y="369.5" width="26" height="16" rx="2" fill="#6e7781"/></g>
+  <text x="32" y="414" class="line" style="animation-delay:1.98s" xml:space="preserve"><tspan class="user">ethaniel@H0ozsed</tspan><tspan class="muted">:</tspan><tspan class="key">~</tspan><tspan class="muted">$ </tspan><tspan class="cursor">▌</tspan></text>
+</svg>
